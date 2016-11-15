@@ -17,8 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5007575E1DDB4D2B008B0292 /* BBMMTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBMMTextView.swift; sourceTree = "<group>"; };
-		5007575F1DDB4D2B008B0292 /* BBMMTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBMMTextField.swift; sourceTree = "<group>"; };
+		5007575E1DDB4D2B008B0292 /* BBMMTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BBMMTextView.swift; path = ../BBMMTextView.swift; sourceTree = "<group>"; };
+		5007575F1DDB4D2B008B0292 /* BBMMTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BBMMTextField.swift; path = ../BBMMTextField.swift; sourceTree = "<group>"; };
 		506D2B451DDB3D1200706AEC /* BBMMInput.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBMMInput.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		506D2B481DDB3D1200706AEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		506D2B4A1DDB3D1200706AEC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -39,6 +39,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		500757621DDB6459008B0292 /* BBMMInput */ = {
+			isa = PBXGroup;
+			children = (
+				5007575E1DDB4D2B008B0292 /* BBMMTextView.swift */,
+				5007575F1DDB4D2B008B0292 /* BBMMTextField.swift */,
+			);
+			path = BBMMInput;
+			sourceTree = "<group>";
+		};
 		506D2B3C1DDB3D1200706AEC = {
 			isa = PBXGroup;
 			children = (
@@ -58,8 +67,7 @@
 		506D2B471DDB3D1200706AEC /* BBMMInput */ = {
 			isa = PBXGroup;
 			children = (
-				5007575E1DDB4D2B008B0292 /* BBMMTextView.swift */,
-				5007575F1DDB4D2B008B0292 /* BBMMTextField.swift */,
+				500757621DDB6459008B0292 /* BBMMInput */,
 				506D2B481DDB3D1200706AEC /* AppDelegate.swift */,
 				506D2B4A1DDB3D1200706AEC /* ViewController.swift */,
 				506D2B4C1DDB3D1200706AEC /* Main.storyboard */,
