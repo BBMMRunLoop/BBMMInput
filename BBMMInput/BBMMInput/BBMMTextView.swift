@@ -11,11 +11,11 @@ import UIKit
 class BBMMTextView: UITextView {
 
    private lazy var  placeHoldLabel  = UILabel()
-    //键盘 frame改变回调
+    /** 键盘Frame 改变完成 回调 */
     var callBackKeyboardDidChangeFrame:((keyboardBeginFrame:CGRect,keyboardEndFrame:CGRect,changeDuration : NSTimeInterval   )->())?
-    //键盘弹出回调
+    /** 键盘已经弹出回调 */
     var callBackKeyboardDidShow : ( (notification : NSNotification) -> ())?
-    // 键盘隐藏回调
+    /** 键盘已经隐藏回调 */
     var callBackKeyboardDidHide : ( (notification : NSNotification) -> ())?
     
    
@@ -40,9 +40,7 @@ class BBMMTextView: UITextView {
          addObserverKeyboardDidChange()
     }
     
-   override func awakeFromNib() {
-        
-   }
+
     
    deinit{
     
@@ -54,7 +52,7 @@ class BBMMTextView: UITextView {
 //MARK:-设置textview占位控件
 extension BBMMTextView{
   
-    func setPlaceHoldTextUI () {
+   private func setPlaceHoldTextUI () {
         placeHoldLabel.font = self.font
         placeHoldLabel.frame = CGRectMake(10, 0, self.frame.size.width, 33)
         placeHoldLabel.textColor = UIColor.lightGrayColor()
@@ -67,20 +65,30 @@ extension BBMMTextView{
 // MARK:- 设置展位属性
 extension BBMMTextView {
  
+    /// 设置占位文字的字体颜色 和 字体
+    ///
+    /// - parameter color   :占位文字颜色
+    /// - parameter font    :占位文字字体
+    ///
     func setPlaceHoldTextAttribute (color:UIColor? , font:UIFont?) {
        
         self.placeHoldLabel.textColor = color ?? UIColor.lightGrayColor()
         self.placeHoldLabel.font = font ?? self.font
     }
     
-    func setPlaceHoldText (placeHoldContext:String?) {
+    /// 设置占位文字
+    ///
+    /// - parameter placeHolderContext   :占位文字字符串
+    ///
     
-        self.placeHoldLabel.text = placeHoldContext
+    func setPlaceHolderText (placeHolderContext:String?) {
+        
+        self.placeHoldLabel.text = placeHolderContext
     }
 
 }
 
-// MARK:- 添加监听 
+// MARK:- 添加文字改变监听
 extension BBMMTextView {
  
     private func receiveTextChangeNotification(){
@@ -98,7 +106,7 @@ extension BBMMTextView {
 
 // MARK:- 键盘监听
 extension BBMMTextView {
-
+    
     private func addObserverKeyboardDidChange(){
        NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardDidChangeFrameNotification:", name: UIKeyboardDidChangeFrameNotification, object: nil)
         
@@ -107,7 +115,10 @@ extension BBMMTextView {
          NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardDidHideNotification:", name: UIKeyboardDidHideNotification, object: nil)
     }
     
-    //键盘推下通知
+    /// 键盘已经隐藏通知
+    ///
+    /// * notification : 通知对象
+    ///
     @objc private func keyboardDidHideNotification(notification:NSNotification) {
         if callBackKeyboardDidHide != nil {
             

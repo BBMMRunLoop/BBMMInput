@@ -68,9 +68,9 @@ extension BBMMTextField {
         self.placeHoldLabel.font = font ?? self.font
     }
     
-    func setPlaceHoldText (placeHoldContext:String?) {
+    func setPlaceHolderText (placeHolderContext:String?) {
         
-        self.placeHoldLabel.text = placeHoldContext
+        self.placeHoldLabel.text = placeHolderContext
     }
     
 }
