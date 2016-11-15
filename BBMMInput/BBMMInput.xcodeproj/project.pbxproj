@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		500757601DDB4D2B008B0292 /* BBMMTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5007575E1DDB4D2B008B0292 /* BBMMTextView.swift */; };
-		500757611DDB4D2B008B0292 /* BBMMTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5007575F1DDB4D2B008B0292 /* BBMMTextField.swift */; };
+		500757651DDB655C008B0292 /* BBMMTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500757631DDB655C008B0292 /* BBMMTextField.swift */; };
+		500757661DDB655C008B0292 /* BBMMTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500757641DDB655C008B0292 /* BBMMTextView.swift */; };
 		506D2B491DDB3D1200706AEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506D2B481DDB3D1200706AEC /* AppDelegate.swift */; };
 		506D2B4B1DDB3D1200706AEC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506D2B4A1DDB3D1200706AEC /* ViewController.swift */; };
 		506D2B4E1DDB3D1200706AEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 506D2B4C1DDB3D1200706AEC /* Main.storyboard */; };
@@ -17,8 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5007575E1DDB4D2B008B0292 /* BBMMTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BBMMTextView.swift; path = ../BBMMTextView.swift; sourceTree = "<group>"; };
-		5007575F1DDB4D2B008B0292 /* BBMMTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BBMMTextField.swift; path = ../BBMMTextField.swift; sourceTree = "<group>"; };
+		500757631DDB655C008B0292 /* BBMMTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBMMTextField.swift; sourceTree = "<group>"; };
+		500757641DDB655C008B0292 /* BBMMTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BBMMTextView.swift; sourceTree = "<group>"; };
 		506D2B451DDB3D1200706AEC /* BBMMInput.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBMMInput.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		506D2B481DDB3D1200706AEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		506D2B4A1DDB3D1200706AEC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -42,8 +42,8 @@
 		500757621DDB6459008B0292 /* BBMMInput */ = {
 			isa = PBXGroup;
 			children = (
-				5007575E1DDB4D2B008B0292 /* BBMMTextView.swift */,
-				5007575F1DDB4D2B008B0292 /* BBMMTextField.swift */,
+				500757631DDB655C008B0292 /* BBMMTextField.swift */,
+				500757641DDB655C008B0292 /* BBMMTextView.swift */,
 			);
 			path = BBMMInput;
 			sourceTree = "<group>";
@@ -149,10 +149,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				500757651DDB655C008B0292 /* BBMMTextField.swift in Sources */,
 				506D2B4B1DDB3D1200706AEC /* ViewController.swift in Sources */,
-				500757611DDB4D2B008B0292 /* BBMMTextField.swift in Sources */,
-				500757601DDB4D2B008B0292 /* BBMMTextView.swift in Sources */,
 				506D2B491DDB3D1200706AEC /* AppDelegate.swift in Sources */,
+				500757661DDB655C008B0292 /* BBMMTextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
