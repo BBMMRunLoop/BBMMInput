@@ -127,6 +127,7 @@ extension BBMMTextView {
         }
     }
     
+    
     //键盘弹出通知
     @objc private func keyboardDidShowNotification(notification:NSNotification){
     
