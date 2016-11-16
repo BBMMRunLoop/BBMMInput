@@ -13,18 +13,23 @@ public class BBMMTextField: UITextField {
     private lazy var  placeHoldLabel  = UILabel()
     
     //keyboarddidchangeframe callback
-    var callBackKeyboardDidChangeFrame:((keyboardBeginFrame:CGRect,keyboardEndFrame:CGRect,changeDuration : NSTimeInterval   )->())?
-    var callBackKeyboardDidShow : ( (notification : NSNotification) -> ())?
+   public var callBackKeyboardDidChangeFrame:((keyboardBeginFrame:CGRect,keyboardEndFrame:CGRect,changeDuration : NSTimeInterval   )->())?
+   public var callBackKeyboardDidShow : ( (notification : NSNotification) -> ())?
     
-    var callBackKeyboardDidHide : ( (notification : NSNotification) -> ())?
+   public var callBackKeyboardDidHide : ( (notification : NSNotification) -> ())?
     
- 
+   public init(){
+      super.init(frame: CGRectZero)
+        setPlaceHoldTextUI()
+        addObserverKeyboardDidChange()
+        
+    }
     
-    override init(frame:CGRect){
+    override public init(frame:CGRect){
         super.init(frame: frame)
         setPlaceHoldTextUI()
         addObserverKeyboardDidChange()
-        print(" init(frame:CGRect)")
+        
     }
     
 
@@ -47,7 +52,7 @@ public class BBMMTextField: UITextField {
 //MARK:-设置textview占位控件
 extension BBMMTextField{
     
-    func setPlaceHoldTextUI () {
+   public func setPlaceHoldTextUI () {
         placeHoldLabel.font = self.font
         placeHoldLabel.frame = CGRectMake(10, 0, self.frame.size.width, 33)
         placeHoldLabel.textColor = UIColor.lightGrayColor()
@@ -60,13 +65,13 @@ extension BBMMTextField{
 // MARK:- 设置展位属性
 extension BBMMTextField {
     
-    func setPlaceHoldTextAttribute (color:UIColor? , font:UIFont?) {
+   public func setPlaceHoldTextAttribute (color:UIColor? , font:UIFont?) {
         
         self.placeHoldLabel.textColor = color ?? UIColor.lightGrayColor()
         self.placeHoldLabel.font = font ?? self.font
     }
     
-    func setPlaceHolderText (placeHolderContext:String?) {
+   public func setPlaceHolderText (placeHolderContext:String?) {
         
         self.placeHoldLabel.text = placeHolderContext
     }

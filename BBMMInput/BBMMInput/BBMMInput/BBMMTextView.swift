@@ -12,20 +12,24 @@ public class BBMMTextView: UITextView {
 
    private lazy var  placeHoldLabel  = UILabel()
     /** 键盘Frame 改变完成 回调 */
-    var callBackKeyboardDidChangeFrame:((keyboardBeginFrame:CGRect,keyboardEndFrame:CGRect,changeDuration : NSTimeInterval   )->())?
+   public var callBackKeyboardDidChangeFrame:((keyboardBeginFrame:CGRect,keyboardEndFrame:CGRect,changeDuration : NSTimeInterval   )->())?
     /** 键盘已经弹出回调 */
-    var callBackKeyboardDidShow : ( (notification : NSNotification) -> ())?
+   public var callBackKeyboardDidShow : ( (notification : NSNotification) -> ())?
     /** 键盘已经隐藏回调 */
-    var callBackKeyboardDidHide : ( (notification : NSNotification) -> ())?
+    public var callBackKeyboardDidHide : ( (notification : NSNotification) -> ())?
     
+    public  init(){
+        super.init(frame: CGRectZero, textContainer: nil)
+        
+    }
    
-    init(frame:CGRect){
+   public init(frame:CGRect){
       super.init(frame: frame, textContainer: nil)
         setPlaceHoldTextUI()
         addObserverKeyboardDidChange()
     }
     
-    override init(frame: CGRect, textContainer: NSTextContainer?) {
+    override public init(frame: CGRect, textContainer: NSTextContainer?) {
         super.init(frame: frame, textContainer: textContainer)
         setPlaceHoldTextUI()
         addObserverKeyboardDidChange()
@@ -70,7 +74,7 @@ extension BBMMTextView {
     /// - parameter color   :占位文字颜色
     /// - parameter font    :占位文字字体
     ///
-    func setPlaceHoldTextAttribute (color:UIColor? , font:UIFont?) {
+   public func setPlaceHoldTextAttribute (color:UIColor? , font:UIFont?) {
        
         self.placeHoldLabel.textColor = color ?? UIColor.lightGrayColor()
         self.placeHoldLabel.font = font ?? self.font
@@ -81,7 +85,7 @@ extension BBMMTextView {
     /// - parameter placeHolderContext   :占位文字字符串
     ///
     
-    func setPlaceHolderText (placeHolderContext:String?) {
+   public  func setPlaceHolderText (placeHolderContext:String?) {
         
         self.placeHoldLabel.text = placeHolderContext
     }
