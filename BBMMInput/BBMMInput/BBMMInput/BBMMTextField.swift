@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BBMMTextField: UITextField {
+public class BBMMTextField: UITextField {
 
     private lazy var  placeHoldLabel  = UILabel()
     
@@ -28,16 +28,14 @@ class BBMMTextField: UITextField {
     }
     
 
-    required  init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         //print("aDecoder")
         setPlaceHoldTextUI()
         addObserverKeyboardDidChange()
     }
     
-    override func awakeFromNib() {
-        
-    }
+   
     
     deinit{
         

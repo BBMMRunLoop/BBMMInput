@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BBMMTextView: UITextView {
+public class BBMMTextView: UITextView {
 
    private lazy var  placeHoldLabel  = UILabel()
     /** 键盘Frame 改变完成 回调 */
@@ -33,7 +33,7 @@ class BBMMTextView: UITextView {
     }
     
    
-   required  init?(coder aDecoder: NSCoder) {
+   required  public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         //print("aDecoder")
          setPlaceHoldTextUI()
