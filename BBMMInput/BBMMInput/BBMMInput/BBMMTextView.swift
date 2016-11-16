@@ -20,7 +20,8 @@ public class BBMMTextView: UITextView {
     
     public  init(){
         super.init(frame: CGRectZero, textContainer: nil)
-        
+        setPlaceHoldTextUI()
+        addObserverKeyboardDidChange()
     }
    
    public init(frame:CGRect){
